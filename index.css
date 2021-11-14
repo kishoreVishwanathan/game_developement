@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+
+	height: 100vh;
+	/* background-color:gray; */
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))
+	/* display: flex; */
+}
+.gameContainer {
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+
+.easy, .medium, .hard{
+	display: none;
+}
+
+.memoryCard {
+	width: 23%;
+	height: 23%;
+	margin: 5px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+.memoryCard:active {
+	transform: scale(0.95);
+	transition: transform 0.2s ease-in-out;
+}
+.memoryCard.flip {
+		transform: rotateY(180deg);
+		cursor: pointer;
+}
+
+.front, .back {
+			background-color: #ff5252;
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			border-radius : 10px;
+			position: absolute;
+			backface-visibility: hidden;
+		
+}
+.front {
+			transform: rotateY(180deg);
+		}
+.center {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+	width: 90px;
+    height: 50px;
+    margin: 2%;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    background-color: darkcyan;
+    border-radius: 16px;
+    outline: none;
+}
+.titleName {
+	padding-left: 46%;
+	font-size: xx-large;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.level {
+	padding-left: 10%;
+	font-family: fantasy;
+	font-size: x-large;
+	text-shadow: 1px 1px 2px rgb(204, 12, 12), 0 0 25px rgb(165, 45, 65), 0 0 5px rgb(218, 125, 145);
+}
+.outputDisplay {
+	display: hide;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.congrats {
+	background-size: cover;
+	/* background-image: url('hardcongrads.jpeg'); */
+}
