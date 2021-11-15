@@ -8,6 +8,8 @@ var easyCount = 0;
 var mediumCount = 0;
 var hardCount = 0;
 var output;
+const soundEffect = document.createElement('audio');
+soundEffect.src = './con.mp3';
 function difficulty(event) {
 	output = event;
 	if (flag === 0) {
@@ -53,6 +55,7 @@ function succes() {
           		document.getElementById("outputDisplay").style.display = "block";
 				document.body.style.backgroundImage  = "url('congrads5.jpeg')";
 				document.body.style.backgroundSize = "cover";
+				soundEffect.play();
         	}
       	} else if(output === "medium") {
 			mediumCount += 1;
@@ -61,6 +64,7 @@ function succes() {
           		document.getElementById("outputDisplay").style.display = "block";
 				document.body.style.backgroundImage  = "url('congrads5.jpeg')";
 				document.body.style.backgroundSize = "cover";
+				soundEffect.play();
         	}
 		} else {
 			hardCount += 1;
@@ -69,6 +73,7 @@ function succes() {
           		document.getElementById("outputDisplay").style.display = "block";
 				document.body.style.backgroundImage  = "url('congrads5.jpeg')";
 				document.body.style.backgroundSize = "cover";
+				soundEffect.play();
         	}
 
 		}
