@@ -77,7 +77,7 @@ body {
 }
 
 .level {
-	padding-left: 10%;
+	margin-top: 5%;
 	font-family: fantasy;
 	font-size: x-large;
 	text-shadow: 1px 1px 2px rgb(204, 12, 12), 0 0 25px rgb(165, 45, 65), 0 0 5px rgb(218, 125, 145);
@@ -87,7 +87,14 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.outputDisplayFail {
+	display: none;
+	margin-top: 15%;
+}
+.timerStyle {
+	color: white;
+	display: none;
+}
 .congrats {
 	background-size: cover;
-	/* background-image: url('hardcongrads.jpeg'); */
 }

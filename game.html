@@ -9,12 +9,21 @@
 
 <body>
     <p class="titleName"> Memory Game </p>
-    <p class="level"> Choose your level!</p>
-    <div class="difficulty">
+    <p class="level center" id="level"> Choose your level!</p>
+    <div class="difficulty center" id="clickButton" >
         <button type="submit"  class="button" onclick="difficulty('easy')">Easy</button>
         <button type="submit"  class="button" onclick="difficulty('medium')">Medium</button>
         <button type="submit"  class="button" onclick="difficulty('hard')">Hard</button>
+        <h1 id="timer" class="timerStyle">Timer:</h1>
     </div>  
+   
+    <div class="instruction " id="instruction" >
+        <h1>Instructions:</h1>
+        <h3 class="center "> ->  You can click any one of the images shown.<br><br>
+             ->  It will turn to a particluar image and memorize the imgae first then click on next any of the images.<br><br>
+             ->  It will also turn to new image and it will compare with the previous image you clicked
+            ,if it is correct the image will be stable orelse it will go the normal image and goes on until end</h3>
+    </div>
 
     <div id="easy" class="gameContainer easy">
         <div class="memoryCard" data-image="github">
@@ -144,6 +153,10 @@
         <audio controls autoplay>
             <source src="con.mp3">
           </audio> -->
+    </div>
+    <div class="outputDisplayFail center"  id="outputDisplayFail">
+        <!-- <img src="kk.jpg"> -->
+        <h1>Sorry! You could not finish the game on time!</h1>
     </div>
         <script src="app.js"></script>
 </body>
